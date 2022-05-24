@@ -16,7 +16,7 @@ const About = ({ i18n }) => {
         <h1 className='text-4xl md:text-6xl my-4'>{i18n.T1}</h1>
         <Quote text={i18n.T2} classes='mx-auto w-max mt-12 mb-16' />
 
-        <div className='grid grid-cols-2 gap-8 items-center p-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
           <img src='/img/about/1.jpg' alt='about1' className='shadow-lg rounded' />
           <img src='/img/about/2.jpg' alt='about2' className='shadow-lg rounded' />
           <img src='/img/about/3.jpg' alt='about3' className='shadow-lg rounded' />
