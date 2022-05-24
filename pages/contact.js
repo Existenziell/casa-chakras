@@ -55,7 +55,7 @@ const Contact = ({ i18n }) => {
 
         <Social />
 
-        <div className='z-0 px-4 pt-8 pb-0 sm:px-12 shadow w-full bg-brand-dark rounded-lg bg-white/10 backdrop-blur-md text-white'>
+        <div className='z-0 px-4 pt-8 pb-0 sm:px-12 shadow w-full bg-brand-dark rounded-lg backdrop-blur-md text-white'>
           <form onSubmit={submitForm}>
             <div className='relative mb-8 text-white'>
               <input

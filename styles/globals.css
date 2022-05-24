@@ -36,14 +36,6 @@ html, body {
   @apply no-underline bg-brand rounded transition-all duration-500 text-white px-1;
 }
 
-/* Counter bug in nextjs Image component - images are rendered with whitespace below
-https://github.com/vercel/next.js/issues/21914 */
-.image-wrapper {
-  display: relative;
-  text-align: bottom;
-  font-size: 0;
-}
-
 
 /* ==========================================================================
 	Navigation
@@ -68,35 +60,9 @@ https://github.com/vercel/next.js/issues/21914 */
     hover:shadow hover:cursor-pointer
     transition-all
 }
+
 .button:disabled {
   @apply bg-slate-500 text-white shadow-none hover:cursor-not-allowed;
-}
-
-input {
-  @apply text-black;
-}
-
-.login-form input[type='text'], 
-.login-form input[type='number'], 
-.login-form input[type='email'], 
-.login-form input[type='website'] {
-  @apply border px-4 py-3 text-brand-dark text-center rounded-lg
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand;
-}
-
-.profile input[type='text'], .profile input[type='number'], .profile input[type='email'], .profile input[type='website'] {
-  @apply border px-3 py-2;
-}
-
-.admin input[type='text'], 
-.admin input[type='number'], 
-.admin input[type='email'], 
-.admin input[type='website'] {
-  @apply border px-3 py-2;
-}
-
-.admin input[type='text']:disabled {
-  @apply border-none bg-transparent;
 }
 
 
