@@ -36,8 +36,12 @@
   "ttc": {
     "title": "Teacher Training Course | Casa Chakras",
     "desc": "Teacher Training Course TTC | Casa Chakras | The best place for Yoga in Cozumel",
-    "T1": "Teacher Training Course (TTC)",
-    "T2": "Ashtanga"
+    "T1": "TTC",
+    "T1a": "Teacher Training Course",
+    "T2": "Kundalini",
+    "T3": "Ashtanga",
+    "T4": "Vinyasa",
+    "T5": "Hatha"
   },
 
   "map": {
@@ -50,7 +54,7 @@
     "T5": "+52 1 322 140 0060"
   },
 
-  "Sobre": {
+  "about": {
     "title": "Sobre | Casa Chakras",
     "desc": "Sobre | Casa Chakras | The best place for Yoga in Cozumel",
     "T1": "Sobre",
