@@ -2,14 +2,14 @@ import { useState } from 'react'
 import Router from 'next/router'
 import Head from 'next/head'
 import Social from '../components/Social'
-import PacmanLoader from 'react-spinners/PacmanLoader'
+import { CircleLoader } from 'react-spinners'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 
 const Contact = ({ i18n }) => {
 
   const [formData, setFormData] = useState()
-  const [sending, setSending] = useState(false)
+  const [sending, setSending] = useState(true)
   const [errorMsg, setErrorMsg] = useState('')
 
   function setData(e) {
@@ -97,8 +97,8 @@ const Contact = ({ i18n }) => {
               </div>
               :
               sending ?
-                <div className='my-8 h-16 mr-16 opacity-60'>
-                  <PacmanLoader color={'white'} size={30} />
+                <div className='my-8 h-16 mr-16'>
+                  <CircleLoader color={'white'} size={50} />
                 </div>
                 :
                 <input type='submit' className='button my-4' aria-label='Send Contact Form' value={i18n.T7}></input>
