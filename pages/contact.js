@@ -9,7 +9,7 @@ import langES from '../i18n/es.json'
 const Contact = ({ i18n }) => {
 
   const [formData, setFormData] = useState()
-  const [sending, setSending] = useState(true)
+  const [sending, setSending] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
   function setData(e) {
