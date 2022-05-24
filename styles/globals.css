@@ -134,13 +134,13 @@ div.mapboxgl-popup-content {
 }
 
 .scroll-up .sticky-header {
-  @apply shadow bg-white transition-all duration-300;
+  @apply shadow bg-brand-dark/80 transition-all duration-300;
 }
 
 .scroll-up:not(.menu-open) .sticky-header {
-  @apply shadow-none bg-transparent;
+  /* @apply shadow-none bg-transparent; */
 }
 
 .scroll-down .sticky-header {
-  @apply shadow-lg bg-white/80 transition-all duration-700;
+  @apply shadow-lg bg-brand-dark/80 transition-all duration-700;
 }
