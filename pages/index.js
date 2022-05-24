@@ -30,7 +30,6 @@ const Casa = ({ i18n }) => {
           <Link href='/ttc'><a className='button inline-block'>{i18n.B2}</a></Link>
         </div>
 
-        <AddToHomeScreen />
         <img src='/img/miel.jpg' alt='Miel' className='rounded-xl shadow-md w-1/2 mx-auto my-8' />
         <p className='mt-8 leading-loose'>{i18n.T5}</p>
       </div>
@@ -43,6 +42,7 @@ const Casa = ({ i18n }) => {
       </section>
 
       <div className='flex flex-col items-center justify-center px-6'>
+        <AddToHomeScreen />
         <p className='text-lg my-8 max-w-xl mx-auto leading-loose'>{i18n.T6}</p>
         <p className='mt-8 pb-16'>{i18n.T7}</p>
       </div>
