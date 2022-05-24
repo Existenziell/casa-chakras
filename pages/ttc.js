@@ -5,7 +5,6 @@ import langES from '../i18n/es.json'
 
 const TTC = ({ i18n }) => {
   return (
-
     <>
       <Head>
         <title>{i18n.title}</title>
@@ -20,12 +19,18 @@ const TTC = ({ i18n }) => {
           <img src='/img/ttc/kundalini.jpg' alt='Kundalini Yoga' className='rounded' />
         </div>
         <p>We offer teacher training courses for the following styles:</p>
-        <ul className='text-xl mx-auto w-max mt-8 flex flex-col gap-2'>
+        <ul className='text-xl mx-auto w-max my-8 flex flex-col gap-2'>
           <li>{i18n.T2}</li>
           <li>{i18n.T3}</li>
           <li>{i18n.T4}</li>
           <li>{i18n.T5}</li>
         </ul>
+        <Link href="/contact">
+          <a className="link">
+            Contact us
+          </a>
+        </Link>
+        {` `}for more information.
       </div>
     </>
 
