@@ -130,7 +130,7 @@ div.mapboxgl-popup-content {
 	========================================================================== */
 
 .sticky-header {
-  @apply fixed top-0 left-0 right-0;
+  @apply fixed top-0 left-0 right-0 hover:bg-brand-dark/80 transition-all duration-300;
 }
 
 .scroll-up .sticky-header {
@@ -138,7 +138,7 @@ div.mapboxgl-popup-content {
 }
 
 .scroll-up:not(.menu-open) .sticky-header {
-  /* @apply shadow-none bg-transparent; */
+  @apply shadow-none bg-transparent;
 }
 
 .scroll-down .sticky-header {
