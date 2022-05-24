@@ -1,0 +1,212 @@
+/* --------------------------------------------------------
+Style Sheet for Casa Chakras Cozumel
+
+version: 0.9
+last modified: 3.11.2021 by Christof Bauer
+author: Christof Bauer
+email: bauer.christof@gmail.com
+----------------------------------------------------------*/
+
+:root {
+  --color-brand: #00CED1;
+  --color-brand-dark: #200530;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+::selection {
+  @apply text-brand bg-brand-dark;
+}
+
+::-moz-selection {
+  @apply text-blue-800;
+}
+
+.link {
+  @apply underline underline-offset-2 outline-none transition-all duration-300;
+}
+
+.link:hover {
+  @apply no-underline bg-brand rounded transition-all duration-500 text-white px-1;
+}
+
+/* Counter bug in nextjs Image component - images are rendered with whitespace below
+https://github.com/vercel/next.js/issues/21914 */
+.image-wrapper {
+  display: relative;
+  text-align: bottom;
+  font-size: 0;
+}
+
+
+/* ==========================================================================
+	Navigation
+	========================================================================== */
+
+.active-nav {
+  @apply font-bold border-b-2 border-brand dark:bg-brand;
+}
+
+.mobile-menu .active-nav {
+  @apply font-bold bg-brand text-white border-b-0;
+}
+
+
+/* ==========================================================================
+	Forms 
+	========================================================================== */
+
+.button {
+  @apply w-48 px-8 py-4 
+  bg-brand text-white rounded shadow-lg
+    hover:shadow hover:cursor-pointer
+    transition-all
+}
+.button:disabled {
+  @apply bg-slate-500 text-white shadow-none hover:cursor-not-allowed;
+}
+
+input {
+  @apply text-black;
+}
+
+.login-form input[type='text'], 
+.login-form input[type='number'], 
+.login-form input[type='email'], 
+.login-form input[type='website'] {
+  @apply border px-4 py-3 text-brand-dark text-center rounded-lg
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand;
+}
+
+.profile input[type='text'], .profile input[type='number'], .profile input[type='email'], .profile input[type='website'] {
+  @apply border px-3 py-2;
+}
+
+.admin input[type='text'], 
+.admin input[type='number'], 
+.admin input[type='email'], 
+.admin input[type='website'] {
+  @apply border px-3 py-2;
+}
+
+.admin input[type='text']:disabled {
+  @apply border-none bg-transparent;
+}
+
+
+/* ==========================================================================
+	Mapbox overrides
+	========================================================================== */
+
+.mapboxgl-canvas {
+  @apply absolute top-0 bottom-0 left-0 w-full h-full;
+}
+
+.mapboxgl-popup {
+  @apply text-left min-w-max overflow-hidden; 
+}
+
+div.mapboxgl-popup-content {
+  @apply p-2 bg-brand-dark/40 backdrop-blur-md;
+}
+
+.mapboxgl-popup-content div {
+  @apply text-sm px-10 py-12 shadow font-sans bg-white/80 backdrop-blur-md dark:bg-brand-dark/80 dark:text-white;
+}
+
+.mapboxgl-popup-content span {
+  @apply text-xs mb-2 block;
+}
+
+.mapboxgl-popup-content h1 {
+  @apply text-3xl md:text-6xl mb-1 text-brand;
+}
+
+.mapboxgl-popup-content h2 {
+  @apply text-base md:text-lg font-normal mb-6;
+}
+
+.mapboxgl-popup-content strong {
+  @apply mt-4 block text-lg;
+}
+
+.mapboxgl-popup-tip {
+  @apply opacity-20;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-3xl px-4 py-1 hover:text-brand hover:scale-105 transition-all dark:text-white focus:outline-none;
+}
+
+
+/* ==========================================================================
+	Supabase UI overrides
+	========================================================================== */
+
+.sbui-btn-primary { 
+  @apply bg-brand !important;
+}
+
+.sbui-typography-link {
+  @apply text-brand !important;
+}
+
+.sbui-checkbox:checked {
+  @apply bg-brand !important; 
+}
+
+
+/* ==========================================================================
+	Blob
+	========================================================================== */
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+
+/* ==========================================================================
+	Sticky header
+	========================================================================== */
+
+.sticky-header {
+  @apply fixed top-0 left-0 right-0;
+}
+
+.scroll-up .sticky-header {
+  @apply shadow bg-white transition-all duration-300;
+}
+
+.scroll-up:not(.menu-open) .sticky-header {
+  @apply shadow-none bg-transparent;
+}
+
+.scroll-down .sticky-header {
+  @apply shadow-lg bg-white/80 transition-all duration-700;
+}
+
+
+
+/* ==========================================================================
+	Admin
+	========================================================================== */
+
+
+.admin th {
+  @apply px-2 py-6;
+}
+
+.admin tr, td {
+  @apply px-2 py-4;
+}

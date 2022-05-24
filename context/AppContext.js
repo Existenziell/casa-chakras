@@ -1,0 +1,42 @@
+import React, { useState } from "react"
+import { createContext, useContext, useEffect } from 'react'
+
+const AppContext = createContext({})
+
+const AppWrapper = ({ children }) => {
+  const [loading, setLoading] = useState(false)
+  const [theme, setTheme] = useState(null)
+  const [notificationMsg, setNotificationMsg] = useState('')
+
+  const notify = (msg) => {
+    const notification = document.querySelector('.notification')
+    notification.classList.remove('-translate-y-20')
+    setNotificationMsg(msg)
+    setTimeout(() => {
+      notification.classList.add('-translate-y-20')
+    }, 3500)
+  }
+
+  let app = {
+    loading,
+    theme,
+    notificationMsg,
+    setLoading,
+    setTheme,
+    setNotificationMsg,
+
+    notify
+  }
+
+  return (
+    <AppContext.Provider value={app}>
+      {children}
+    </AppContext.Provider>
+  )
+}
+
+const useAppContext = () => {
+  return useContext(AppContext)
+}
+
+export { AppContext, AppWrapper, useAppContext }
