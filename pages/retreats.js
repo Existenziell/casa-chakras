@@ -28,7 +28,7 @@ const Retreats = ({ i18n }) => {
         <h1 className="text-4xl md:text-6xl mb-12 mt-4">{i18n.T1}</h1>
 
         <div className='flex items-center justify-center flex-col md:flex-row gap-8 mb-16'>
-          <img src='/img/peace.jpg' alt='Peace' className='shadow-lg rounded w-1/2' />
+          <img src='/peace.jpg' alt='Peace' className='shadow-lg rounded w-1/2' />
 
           <div className='leading-normal text-lg md:text-left'>
             <p className='mb-4'>{i18n.T2}</p>

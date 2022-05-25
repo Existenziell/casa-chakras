@@ -16,8 +16,8 @@ module.exports = {
       },
       backgroundImage: {
         'cloth-pattern': 'url(/icons/cloth.jpg)',
-        'parallax-1': 'url(/img/palapa.jpg)',
-        'parallax-2': 'url(/img/palapa2.jpg)',
+        'parallax-1': 'url(/palapa.jpg)',
+        'parallax-2': 'url(/palapa2.jpg)',
       },
       animation: {
         blob: 'blob 7s infinite',

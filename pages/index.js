@@ -30,7 +30,7 @@ const Casa = ({ i18n }) => {
           <Link href='/ttc'><a className='button inline-block'>{i18n.B2}</a></Link>
         </div>
 
-        <img src='/img/miel.jpg' alt='Miel' className='rounded-xl shadow-md w-1/2 mx-auto my-8' />
+        <img src='/miel.jpg' alt='Miel' className='rounded-xl shadow-md w-1/2 mx-auto my-8' />
         <p className='mt-8 leading-loose'>{i18n.T5}</p>
       </div>
 

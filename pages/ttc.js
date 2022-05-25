@@ -15,8 +15,8 @@ const TTC = ({ i18n }) => {
         <h1 className="text-4xl md:text-6xl mt-4 mb-2">{i18n.T1}</h1>
         <h2 className="text-lg mb-8">&#8220; {i18n.T1a} &#8221;</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-12'>
-          <img src='/img/ttc/ashtanga.jpg' alt='Ashtanga Yoga' className='rounded' />
-          <img src='/img/ttc/kundalini.jpg' alt='Kundalini Yoga' className='rounded' />
+          <img src='/ttc/ashtanga.jpg' alt='Ashtanga Yoga' className='rounded' />
+          <img src='/ttc/kundalini.jpg' alt='Kundalini Yoga' className='rounded' />
         </div>
         <p>We offer teacher training courses for the following styles:</p>
         <ul className='text-xl mx-auto w-max my-8 flex flex-col gap-2'>
@@ -25,6 +25,17 @@ const TTC = ({ i18n }) => {
           <li>{i18n.T4}</li>
           <li>{i18n.T5}</li>
         </ul>
+
+        <div className='bg-white rounded shadow w-full py-8 flex flex-wrap items-center justify-center gap-4 mb-12'>
+          <img src='/ttc/ryt-200.png' alt='RYT-200' className='w-52' />
+          <img src='/ttc/diploma1.jpg' alt='Diploma 1' className='w-52' />
+          <img src='/ttc/diploma2.jpg' alt='Diploma 2' className='w-52' />
+          <img src='/ttc/diploma3.jpg' alt='Diploma 3' className='w-52' />
+          <img src='/ttc/diploma4.jpg' alt='Diploma 4' className='w-52' />
+          <img src='/ttc/diploma5.jpg' alt='Diploma 5' className='w-52' />
+          <img src='/ttc/ryt-500.png' alt='RYT-500' className='w-52' />
+        </div>
+
         <Link href="/contact">
           <a className="link">
             Contact us
