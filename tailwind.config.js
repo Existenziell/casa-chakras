@@ -15,7 +15,7 @@ module.exports = {
         'brand-dark': '#200530',
       },
       backgroundImage: {
-        'cloth-pattern': 'url(/icons/cloth.jpg)',
+        'cloth-pattern': 'url(/cloth.jpg)',
         'parallax-1': 'url(/palapa.jpg)',
         'parallax-2': 'url(/palapa2.jpg)',
       },
