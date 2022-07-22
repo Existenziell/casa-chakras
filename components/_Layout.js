@@ -1,7 +1,4 @@
-import { useContext } from 'react'
-import { AppContext } from '../context/AppContext'
 import { useRouter } from 'next/router'
-
 import Nav from './Nav'
 import Footer from './Footer'
 import NextNprogress from 'nextjs-progressbar'
@@ -10,11 +7,7 @@ import StickyHeader from './StickyHeader'
 import Notification from './Notification'
 
 const Layout = ({ children }) => {
-  const appCtx = useContext(AppContext)
-  const { session } = appCtx
-
   const router = useRouter()
-
   return (
     <>
       <Notification />

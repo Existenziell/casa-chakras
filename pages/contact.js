@@ -5,6 +5,7 @@ import Social from '../components/Social'
 import { CircleLoader } from 'react-spinners'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
+import Link from 'next/link'
 
 const Contact = ({ i18n }) => {
 
@@ -46,14 +47,15 @@ const Contact = ({ i18n }) => {
 
       <div className='flex flex-col items-center justify-center px-4 md:px-8 py-24 lg:w-2/3 lg:mx-auto'>
         <h1 className='text-4xl md:text-6xl mb-12 mt-4'>{i18n.T1}</h1>
-        <div className='md:flex items-center gap-8 md:text-right'>
-          <div className='md:w-2/3'>
-            <p className='text-lg mx-auto leading-relaxed mb-8 max-w-sm'>{i18n.T2}</p>
+        <div className='md:flex items-center gap-8 md:text-right mb-12'>
+          <div className='md:w-1/2'>
+            <p className='text-lg mx-auto leading-relaxed mb-8'>{i18n.T2}</p>
+            <Social />
+            <Link href='/visit'><a className='link'>Find us on map</a></Link>
           </div>
           <img src='/contact.jpg' alt={i18n.T1} className='md:w-1/2 shadow rounded' />
         </div>
 
-        <Social />
 
         <div className='z-0 px-4 pt-8 pb-0 sm:px-12 shadow w-full bg-brand-dark rounded-lg backdrop-blur-md text-white'>
           <form onSubmit={submitForm}>

@@ -1,12 +1,9 @@
-import { useState, useContext } from 'react'
-import { AppContext } from '../context/AppContext'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 
 const Nav = () => {
-    const appCtx = useContext(AppContext)
-
     const [isOpen, setIsOpen] = useState(false)
     const { locale } = useRouter()
     const router = useRouter()

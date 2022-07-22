@@ -2,14 +2,16 @@
   "name": "casa-chakras",
   "author": "Christof Bauer <bauer.christof@gmail.com> (http://christof.digital/)",
   "version": "0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.2",
+    "eslint": "^8.20.0",
     "framer-motion": "^6.3.3",
     "jsonwebtoken": "^8.5.1",
     "mapbox-gl": "^2.8.2",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "eslint-config-next": "12.2.3",
     "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
   }
