@@ -47,7 +47,7 @@ const Casa = ({ i18n }) => {
         <AddToHomeScreen />
         {/* <p className='text-lg my-8 max-w-xl mx-auto leading-loose'>{i18n.T6}</p> */}
         <img src='/miel.jpg' alt='Miel' className='rounded-xl shadow-md w-1/3 mx-auto my-8' />
-        <p className='mt-8 pb-2'>Casa Chakras | El Cedral | Cozumel | +52 132 214 000 60</p>
+        <p className='mt-8 pb-2'>Casa Chakras | El Cedral | Cozumel | +52 322 140 00 60</p>
       </div>
     </>
   )
