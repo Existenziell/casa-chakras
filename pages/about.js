@@ -4,8 +4,16 @@ import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 import Quote from '../components/Quote'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const About = ({ i18n }) => {
+  const [showFullscreen, setShowFullscreen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState()
+
+  const maximize = (image) => {
+    setShowFullscreen(true)
+    setSelectedImage(image)
+  }
   return (
     <>
       <Head>
@@ -31,7 +39,7 @@ const About = ({ i18n }) => {
         <h2 className='mb-4'>Please find a few impressions of Casa Chakras beneath:</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 items-center justify-center'>
           {[...Array(16)].map((e, i) => (
-            <div className='shadow-xl' key={i}>
+            <div className='shadow-xl hover:scale-105 transition-all duration-500 hover:cursor-pointer' key={i} onClick={() => maximize(`/about/${i + 1}.jpg`)}>
               <Image
                 src={`/about/${i + 1}.jpg`}
                 alt={`About CasaChakras ${i + 1}`}
@@ -47,6 +55,22 @@ const About = ({ i18n }) => {
           ))}
         </div>
       </div>
+
+      {showFullscreen &&
+        <div onClick={() => setShowFullscreen(false)} className='fixed top-0 bottom-0 left-0 right-0 bg-black/20 backdrop-blur-xl transition-all'>
+          <div className='p-8 md:p-16 w-full h-full' >
+            <div className='relative w-full h-full hover:cursor-pointer'>
+              <Image
+                src={selectedImage}
+                alt={'About'}
+                className='rounded'
+                layout='fill'
+                objectFit='contain'
+              />
+            </div>
+          </div>
+        </div>
+      }
     </>
   )
 }
