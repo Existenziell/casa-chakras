@@ -3,6 +3,7 @@ import Head from 'next/head'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 import Quote from '../components/Quote'
+import Image from 'next/image'
 
 const About = ({ i18n }) => {
   return (
@@ -25,27 +26,25 @@ const About = ({ i18n }) => {
           <p className='mt-6'>Available Yoga Styles:<br /> Hatha, Vinyasa, Kundalini, Ashtanga, Yin.</p>
           <p className='mt-6'>We speak the following languages:<br /> English, Español, Português, Français, Deutsch.</p>
           <Link href='/visit'><a className='link mt-6 inline-block'>Find us on map</a></Link>
-
         </div>
 
         <h2 className='mb-4'>Please find a few impressions of Casa Chakras beneath:</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
-          <img src='/about/1.jpg' alt='about1' className='shadow-lg rounded' />
-          <img src='/about/2.jpg' alt='about2' className='shadow-lg rounded' />
-          <img src='/about/3.jpg' alt='about3' className='shadow-lg rounded' />
-          <img src='/about/4.jpg' alt='about4' className='shadow-lg rounded' />
-          <img src='/about/5.jpg' alt='about5' className='shadow-lg rounded' />
-          <img src='/about/6.jpg' alt='about6' className='shadow-lg rounded' />
-          <img src='/about/7.jpg' alt='about7' className='shadow-lg rounded' />
-          <img src='/about/8.jpg' alt='about8' className='shadow-lg rounded' />
-          <img src='/about/9.jpg' alt='about9' className='shadow-lg rounded' />
-          <img src='/about/10.jpg' alt='about10' className='shadow-lg rounded' />
-          <img src='/about/11.jpg' alt='about11' className='shadow-lg rounded' />
-          <img src='/about/12.jpg' alt='about12' className='shadow-lg rounded' />
-          <img src='/about/13.jpg' alt='about13' className='shadow-lg rounded' />
-          <img src='/about/14.jpg' alt='about14' className='shadow-lg rounded' />
-          <img src='/about/15.jpg' alt='about15' className='shadow-lg rounded' />
-          <img src='/about/16.jpg' alt='about16' className='shadow-lg rounded' />
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 items-center justify-center'>
+          {[...Array(16)].map((e, i) => (
+            <div className='shadow-xl' key={i}>
+              <Image
+                src={`/about/${i + 1}.jpg`}
+                alt={`About CasaChakras ${i + 1}`}
+                className='rounded'
+                width={500}
+                height={500}
+                layout='responsive'
+                objectFit='cover'
+                placeholder="blur"
+                blurDataURL={`/about/${i + 1}.jpg`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>

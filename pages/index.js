@@ -1,11 +1,11 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
-import AddToHomeScreen from '../components/AddToHomeScreen'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
+import AddToHomeScreen from '../components/AddToHomeScreen'
 
 const Casa = ({ i18n }) => {
-
   return (
     <>
       <Head>
@@ -46,7 +46,19 @@ const Casa = ({ i18n }) => {
       <div className='flex flex-col items-center justify-center px-6'>
         <AddToHomeScreen />
         {/* <p className='text-lg my-8 max-w-xl mx-auto leading-loose'>{i18n.T6}</p> */}
-        <img src='/miel.jpg' alt='Miel' className='rounded-xl shadow-md w-1/3 mx-auto my-8' />
+        <div className='shadow-lg w-1/3 mx-auto my-8'>
+          <Image
+            src='/miel.jpg'
+            alt='Miel'
+            className='rounded'
+            width={600}
+            height={400}
+            layout='responsive'
+            objectFit='cover'
+            placeholder="blur"
+            blurDataURL='/miel.jpg'
+          />
+        </div>
         <p className='mt-8 pb-2'>Casa Chakras | El Cedral | Cozumel | +52 322 140 00 60</p>
       </div>
     </>

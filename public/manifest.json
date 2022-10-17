@@ -6,7 +6,7 @@
   "start_url": "/",
   "name": "Casa Chakras",
   "short_name": "CC",
-  "description": "The best place for Yoga in Cozumel",
+  "description": "Yoga Retreats and TTCs on the beautiful island of Cozumel",
   "icons": [
     {
       "src": "/favicon/icon-192x192.png",
@@ -27,6 +27,12 @@
       "src": "/favicon/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

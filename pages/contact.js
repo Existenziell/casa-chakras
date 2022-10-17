@@ -1,14 +1,14 @@
 import { useState } from 'react'
+import { CircleLoader } from 'react-spinners'
 import Router from 'next/router'
 import Head from 'next/head'
 import Social from '../components/Social'
-import { CircleLoader } from 'react-spinners'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Contact = ({ i18n }) => {
-
   const [formData, setFormData] = useState()
   const [sending, setSending] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
@@ -21,7 +21,7 @@ const Contact = ({ i18n }) => {
   const submitForm = async e => {
     e.preventDefault()
     setSending(true)
-    let data = { ...formData }
+    const data = { ...formData }
 
     try {
       const res = await fetch('/api/sendMail', {
@@ -49,13 +49,24 @@ const Contact = ({ i18n }) => {
         <h1 className='text-4xl md:text-6xl mb-12 mt-4'>{i18n.T1}</h1>
         <div className='md:flex items-center gap-8 md:text-right mb-12'>
           <div className='md:w-1/2'>
-            <p className='text-lg mx-auto leading-relaxed mb-8'>{i18n.T2}</p>
+            <p className='text-lg mx-auto leading-relaxed mb-8 px-8'>{i18n.T2}</p>
             <Social />
             <Link href='/visit'><a className='link'>Find us on map</a></Link>
           </div>
-          <img src='/contact.jpg' alt={i18n.T1} className='md:w-1/2 shadow rounded' />
+          <div className='hidden md:block md:w-1/2 shadow rounded'>
+            <Image
+              src='/contact.jpg'
+              alt={i18n.T1}
+              className='rounded'
+              width={1000}
+              height={668}
+              layout='responsive'
+              objectFit='cover'
+              placeholder="blur"
+              blurDataURL='/contact.jpg'
+            />
+          </div>
         </div>
-
 
         <div className='z-0 px-4 pt-8 pb-0 sm:px-12 shadow w-full bg-brand-dark rounded-lg backdrop-blur-md text-white'>
           <form onSubmit={submitForm}>

@@ -1,9 +1,10 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import langEN from '../i18n/en.json'
-import langES from '../i18n/es.json'
 import { useEffect, useState } from 'react'
 import { CircleLoader } from 'react-spinners'
+import Link from 'next/link'
+import Head from 'next/head'
+import Image from 'next/image'
+import langEN from '../i18n/en.json'
+import langES from '../i18n/es.json'
 
 const Retreats = ({ i18n }) => {
   const [loading, setLoading] = useState(true)
@@ -26,9 +27,19 @@ const Retreats = ({ i18n }) => {
 
       <div className='px-4 md:px-8 py-24'>
         <h1 className="text-4xl md:text-6xl mb-12 mt-4">{i18n.T1}</h1>
-
         <div className='flex items-center justify-center flex-col md:flex-row gap-8 mb-16'>
-          <img src='/peace.jpg' alt='Peace' className='shadow-lg rounded w-1/2' />
+          <div className='shadow-lg w-1/2'>
+            <Image
+              src='/peace.jpg'
+              alt='Peace'
+              className='rounded'
+              width={1000}
+              height={668}
+              layout='responsive'
+              placeholder="blur"
+              blurDataURL='/peace.jpg'
+            />
+          </div>
 
           <div className='leading-normal text-lg md:text-left'>
             <p className='mb-4'>{i18n.T2}</p>
@@ -54,13 +65,10 @@ const Retreats = ({ i18n }) => {
             <iframe title="retreat-4" className="w-full min-h-screen mb-16 border-b-2 pb-16" src=" https://www.bookyogaretreats.com/yoga-kundalini-teacher-training-in-cozumel/14-day-kundalini-tantra-yoga-retreat-in-cozumel"></iframe>
           </div>
         }
-
       </div>
     </>
-
   )
 }
-
 
 export async function getStaticProps(context) {
   let i18n

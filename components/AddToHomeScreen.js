@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import { useEffect } from 'react'
 
 const AddToHomeScreen = () => {
-
   useEffect(() => {
     prompt()
   }, [])
@@ -39,11 +39,18 @@ const AddToHomeScreen = () => {
 
   return (
     <div className='a2hs-button w-32 mx-auto rounded px-4 py-2 bg-white cursor-pointer flex flex-col items-center space-y-2'>
-      <img src='/lotus.png' alt='Lotus Flower' />
+      <Image
+        src='/lotus.png'
+        alt='Lotus Flower'
+        width={1074}
+        height={1074}
+        objectFit='cover'
+        placeholder="blur"
+        blurDataURL='/lotus.png'
+      />
       <button className="text-sm text-brand-dark" aria-label='Tap to add to home screen'>Tap to add to home screen</button>
     </div>
   )
-
 }
 
 export default AddToHomeScreen

@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
 // https://github.com/naomigrace/nextjs-with-mapbox-gl-js/blob/master/pages/index.js
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
@@ -55,7 +54,6 @@ const Visit = ({ i18n }) => {
 
     initializeMap(map, i18n)
     setMap(map)
-
   }, [router.query.location])
 
   useEffect(() => {

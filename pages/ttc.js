@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
 
@@ -20,31 +21,82 @@ const TTC = ({ i18n }) => {
         <p className='mt-4'>During our course you will come in contact with many different styles and philosophies of Yoga - in order to give a wide understanding and good base for further specialisations.</p>
         <p>We include styles such as Hatha, Kundalini, Ashtanga, Vinyasa, Yin and Tantra...</p>
 
-
         <h2 className='text-2xl mt-12 mb-6 text-left'>Teachers:</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
-          <img src='/ttc/kundalini.jpg' alt='Kundalini Yoga' className='rounded' />
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 mb-12'>
+          <Image
+            src='/ttc/kundalini.jpg'
+            alt='Kundalini Yoga'
+            className='rounded'
+            width={851}
+            height={852}
+            objectFit='cover'
+            placeholder="blur"
+            blurDataURL='/ttc/kundalini.jpg'
+          />
           <div className='text-2xl md:text-left'>
             <p className='text-6xl border-b border-brand'>Miel</p>
-            <div className='flex flex-wrap gap-4 mt-12'>
-              <img src='/ttc/diploma1.jpg' alt='Diploma 1' className='w-52' />
-              <img src='/ttc/diploma2.jpg' alt='Diploma 2' className='w-52' />
-              <img src='/ttc/diploma3.jpg' alt='Diploma 3' className='w-52' />
-              <img src='/ttc/diploma4.jpg' alt='Diploma 4' className='w-52' />
-              <img src='/ttc/diploma5.jpg' alt='Diploma 5' className='w-52' />
+            <h2 className='mt-8 text-base'>Certificates:</h2>
+            <div className='flex gap-4 mt-2'>
+              {[...Array(5)].map((e, i) => (
+                <div key={i}>
+                  <Image
+                    src={`/ttc/diploma${i + 1}.jpg`}
+                    alt={`Diploma ${i + 1}`}
+                    className='rounded-sm'
+                    width={600}
+                    height={300}
+                    // layout='responsive'
+                    objectFit='cover'
+                    placeholder="blur"
+                    blurDataURL={`/ttc/diploma${i + 1}.jpg`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-12'>
-          <div className='text-2xl md:text-right'>
-            <p className='text-6xl border-b border-brand'>Christof</p>
-            <div className='flex flex-wrap gap-4 mt-12 justify-end'>
-              <img src='/ttc/ryt-200.png' alt='RYT-200' className='w-52' />
-              <img src='/ttc/ryt-500.png' alt='RYT-500' className='w-52' />
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 mb-12'>
+          <div className='text-2xl'>
+            <p className='text-6xl border-b border-brand md:text-right'>Christof</p>
+            <h2 className='mt-8 text-base text-left'>Certificates:</h2>
+            <div className='flex gap-4 mt-2'>
+              <Image
+                src='/ttc/ryt-200.png'
+                alt='RYT-200'
+                className='rounded-sm'
+                width={100}
+                height={100}
+                objectFit='cover'
+                placeholder="blur"
+                blurDataURL='/ttc/ryt-200.png'
+              />
+              <Image
+                src='/ttc/ryt-500.png'
+                alt='RYT-500'
+                className='rounded-sm'
+                width={100}
+                height={100}
+                objectFit='cover'
+                placeholder="blur"
+                blurDataURL='/ttc/ryt-500.png'
+              />
             </div>
           </div>
-          <img src='/ttc/ashtanga.jpg' alt='Ashtanga Yoga' className='rounded' />
+          <Image
+            src='/ttc/ashtanga.jpg'
+            alt='Ashtanga Yoga'
+            className='rounded'
+            width={1074}
+            height={1074}
+            objectFit='cover'
+            placeholder="blur"
+            blurDataURL='/ttc/ashtanga.jpg'
+          />
         </div>
+
+        {/* <div>
+          New content...
+        </div> */}
 
         <Link href="/contact">
           <a className="link">
@@ -57,7 +109,6 @@ const TTC = ({ i18n }) => {
 
   )
 }
-
 
 export async function getStaticProps(context) {
   let i18n

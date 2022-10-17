@@ -1,18 +1,13 @@
-const withPWA = require("next-pwa")
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  disable: process.env.NODE_ENV === 'development',
+})
 
-const settings = {
+module.exports = withPWA({
+  reactStrictMode: true,
   i18n: {
     locales: ['en', 'es'],
     defaultLocale: 'en',
   },
-  pwa: {
-    dest: "public",
-    register: true,
-    skipWaiting: true,
-  },
-  devIndicators: {
-    autoPrerender: false,
-  }
-}
-
-module.exports = process.env.NODE_ENV === 'development' ? settings : withPWA(settings);
+})
