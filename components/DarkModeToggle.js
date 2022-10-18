@@ -46,7 +46,7 @@ const DarkModeToggle = () => {
   }
 
   return (
-    <button className='bg-brand/80 dark:bg-brand-dark/80 p-1 rounded w-[50px] h-[50px] flex items-center justify-center z-20 transition-all'>
+    <button className='bg-brand/80 dark:bg-brand-dark/80 p-1 rounded w-[50px] h-[50px] flex items-center justify-center z-20 transition-all' aria-label='Toggle Darkmode'>
       {darkmode === 'light' ?
         <svg onClick={setDark} xmlns='http://www.w3.org/2000/svg' className='h-10 w-10 p-0 cursor-pointer text-brand-dark dark:text-brand hover:text-white dark:hover:text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' />

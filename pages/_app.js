@@ -16,9 +16,6 @@ function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#603cba" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#C90076" />
-        {/* <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true" />
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Gotu&display=swap' /> */}
       </Head>
       <Layout>
         <Component {...pageProps} />

@@ -9,10 +9,10 @@
   },
 
   "home": {
-    "title": "Casa Chakras | The best place for Yoga in Cozumel",
-    "desc": "The best place for Yoga in Cozumel",
+    "title": "Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
+    "desc": "Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "Casa Chakras",
-    "T2": "The best place for Yoga in Cozumel!",
+    "T2": "Yoga Retreats and TTCs on the beautiful island of Cozumel!",
     "T3": "Welcome!",
     "T4": "We offer Yoga Retreats, Teacher Trainings and Nature Get-Aways in the heart of the jungle of Cozumel. We can accomodate all ages and all levels - to make this a truly unforgettable experience for you!",
     "B1": "Retreats",
@@ -26,7 +26,7 @@
 
   "retreats": {
     "title": "Retreats | Casa Chakras",
-    "desc": "Retreats | Casa Chakras | The best place for Yoga in Cozumel",
+    "desc": "Retreats | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "Retreats",
     "T2": "We offer various retreats with different activities - please find a list below.",
     "T3": "Contact us",
@@ -35,7 +35,7 @@
 
   "ttc": {
     "title": "Teacher Training Course | Casa Chakras",
-    "desc": "Teacher Training Course TTC | Casa Chakras | The best place for Yoga in Cozumel",
+    "desc": "Teacher Training Course TTC | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "TTC",
     "T1a": "Teacher Training Course",
     "T2": "Kundalini",
@@ -45,25 +45,25 @@
   },
 
   "map": {
-    "title": "Map | Casa Chakras | The best place for Yoga in Cozumel",
+    "title": "Map | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "desc": "Where and how to find us | Casa Chakras",
     "T1": "Anno 2018",
     "T2": "Casa Chakras",
-    "T3": "The best place for Yoga in Cozumel",
+    "T3": "Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T4": "El Cedral, Cozumel",
     "T5": "+52 1 322 140 0060"
   },
 
   "about": {
     "title": "About | Casa Chakras",
-    "desc": "About | Casa Chakras | The best place for Yoga in Cozumel",
+    "desc": "About | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "About",
     "T2": "Mi casa es tu casa"
   },
 
   "contact": {
-    "title": "Contact | Casa Chakras | The best place for Yoga in Cozumel",
-    "desc": "Contact | Casa Chakras | The best place for Yoga in Cozumel",
+    "title": "Contact | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
+    "desc": "Contact | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "Contact",
     "T2": "Please leave any suggestions or feedback, it is always very welcome. We are excited to hear from you!",
     "T4": "Name",
@@ -73,8 +73,8 @@
   },
 
   "success": {
-    "title": "Success | Casa Chakras | The best place for Yoga in Cozumel",
-    "desc": "Successfully sent | Casa Chakras | The best place for Yoga in Cozumel",
+    "title": "Success | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
+    "desc": "Successfully sent | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "Thank you!",
     "B1": "Back Home",
     "B2": "Visit"
