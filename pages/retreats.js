@@ -54,7 +54,7 @@ const Retreats = ({ i18n }) => {
                   />
                 </div>
                 {retreat.promo ?
-                  <div className='absolute top-1 left-1 bg-red-600 px-2 py-1 rounded text-white text-xs'>
+                  <div className='absolute top-1 left-1 bg-brand px-2 py-1 rounded text-brand-dark text-xs'>
                     5% off
                   </div>
                   : null
