@@ -35,7 +35,7 @@ html, body {
 }
 
 .link:hover {
-  @apply no-underline bg-brand rounded transition-all duration-500 text-white px-1;
+  @apply no-underline text-brand transition-all;
 }
 
 .nextimg {
@@ -64,13 +64,23 @@ html, body {
 	========================================================================== */
 
 .button {
-  @apply w-48 px-8 py-4 rounded shadow-lg transition-all
-  bg-brand text-brand-dark 
-    hover:shadow hover:cursor-pointer hover:text-brand-dark/70;
+  @apply px-6 py-3 rounded shadow-md transition-all bg-brand text-brand-dark;
+}
+
+.button:hover {
+  @apply shadow cursor-pointer text-white;
 }
 
 .button:disabled {
   @apply bg-slate-500 text-white shadow-none hover:cursor-not-allowed;
+}
+
+.button-secondary {
+  @apply py-[10px] bg-transparent border-2 border-brand transition-all dark:text-brand;
+}
+
+.button-secondary:hover {
+  @apply bg-brand text-white;
 }
 
 
