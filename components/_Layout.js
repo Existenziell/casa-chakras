@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router'
 import Nav from './Nav'
 import Footer from './Footer'
 import NextNprogress from 'nextjs-progressbar'
 import DarkModeToggle from './DarkModeToggle'
 
 const Layout = ({ children }) => {
-  const router = useRouter()
   return (
     <>
       <NextNprogress
