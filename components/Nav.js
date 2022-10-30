@@ -18,7 +18,7 @@ const Nav = () => {
     { name: i18n.N2, url: '/retreats', title: i18n.N2 },
     { name: i18n.N3, url: '/ttc', title: i18n.N3 },
     { name: i18n.N4, url: '/about', title: i18n.N4 },
-    { name: i18n.N5, url: '/visit', title: i18n.N5 },
+    // { name: i18n.N5, url: '/visit', title: i18n.N5 },
     { name: i18n.N6, url: '/contact', title: i18n.N6 },
   ]
 

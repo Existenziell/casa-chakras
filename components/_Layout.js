@@ -25,9 +25,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
 
-      {router.pathname !== '/visit' &&
-        <Footer />
-      }
+      <Footer />
     </>
   )
 }

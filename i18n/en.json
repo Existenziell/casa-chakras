@@ -1,7 +1,7 @@
 {
   "navigation": {
-    "N1": "Casa",
-    "N2": "Retreats",
+    "N1": "Casa Chakras",
+    "N2": "Yoga Retreats",
     "N3": "Teacher Trainings",
     "N4": "About",
     "N5": "Visit",
@@ -77,6 +77,6 @@
     "desc": "Successfully sent | Casa Chakras | Yoga Retreats and TTCs on the beautiful island of Cozumel",
     "T1": "Thank you!",
     "B1": "Back Home",
-    "B2": "Visit"
+    "B2": "About us"
   }
 }

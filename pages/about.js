@@ -32,8 +32,8 @@ const About = ({ i18n }) => {
             Together, we have a combined time of teaching of over 10 years and are very passionate about teaching and giving back to the community.
           </p>
           <p className='mt-6'>Available Yoga Styles:<br /> Hatha, Vinyasa, Kundalini, Ashtanga, Yin.</p>
-          <p className='mt-6'>We speak the following languages:<br /> English, Español, Português, Français, Deutsch.</p>
-          <Link href='/visit'><a className='link mt-6 inline-block'>Find us on map</a></Link>
+          <p className='mt-6'>We speak the following languages:<br />English, Español, Português, Français, Deutsch.</p>
+          <Link href='/contact'><a className='link mt-6 inline-block'>Contact us</a></Link>
         </div>
 
         <h2 className='mb-4'>Please find a few impressions of Casa Chakras beneath:</h2>

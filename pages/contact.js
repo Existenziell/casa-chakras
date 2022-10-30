@@ -5,13 +5,14 @@ import Head from 'next/head'
 import Social from '../components/Social'
 import langEN from '../i18n/en.json'
 import langES from '../i18n/es.json'
-import Link from 'next/link'
 import Image from 'next/image'
+import MapComponent from '../components/Map'
 
 const Contact = ({ i18n }) => {
   const [formData, setFormData] = useState()
   const [sending, setSending] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
+  const translations = i18n.contact
 
   function setData(e) {
     const { name, value } = e.target
@@ -41,22 +42,21 @@ const Contact = ({ i18n }) => {
   return (
     <>
       <Head>
-        <title>{i18n.title}</title>
-        <meta name='description' content={i18n.desc} />
+        <title>{translations.title}</title>
+        <meta name='description' content={translations.desc} />
       </Head>
 
       <div className='flex flex-col items-center justify-center px-4 md:px-8 py-24 lg:w-2/3 lg:mx-auto'>
-        <h1 className='text-4xl md:text-6xl mb-12 mt-4'>{i18n.T1}</h1>
-        <div className='md:flex items-center gap-8 md:text-right mb-12'>
+        <h1 className='text-4xl md:text-6xl mb-10'>{translations.T1}</h1>
+        <div className='md:flex items-center gap-8 md:text-right md:mb-8'>
           <div className='md:w-1/2'>
-            <p className='text-lg mx-auto leading-relaxed mb-8 px-8'>{i18n.T2}</p>
+            <p className='mx-auto leading-relaxed'>{translations.T2}</p>
             <Social />
-            <Link href='/visit'><a className='link'>Find us on map</a></Link>
           </div>
           <div className='hidden md:block md:w-1/2 shadow rounded'>
             <Image
               src='/contact.jpg'
-              alt={i18n.T1}
+              alt={translations.T1}
               className='rounded'
               width={1000}
               height={668}
@@ -74,34 +74,34 @@ const Contact = ({ i18n }) => {
               <input
                 id='name' name='name' type='text'
                 onChange={setData} required disabled={sending}
-                className='peer h-10 w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none' placeholder={i18n.T4}
+                className='peer h-10 w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none' placeholder={translations.T4}
               />
               <label htmlFor='name'
                 className='absolute -top-5 left-0 text-sm transition-all
                             peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:left-4
-                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{i18n.T4}</label>
+                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{translations.T4}</label>
             </div>
             <div className='relative mb-8'>
               <input
                 id='email' type='email' name='email'
                 onChange={setData} required disabled={sending}
-                className='peer h-10 w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none' placeholder={i18n.T5}
+                className='peer h-10 w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none' placeholder={translations.T5}
               />
               <label htmlFor='email'
                 className='absolute -top-5 left-0 text-sm transition-all
                             peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:left-4
-                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{i18n.T5}</label>
+                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{translations.T5}</label>
             </div>
             <div className='relative'>
               <textarea
                 id='message' name='message'
                 onChange={setData} rows='10' required disabled={sending}
-                className='peer h-full w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none py-4' placeholder={i18n.T6}>
+                className='peer h-full w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 border-none py-4' placeholder={translations.T6}>
               </textarea>
               <label htmlFor='message'
                 className='absolute -top-5 left-0 text-sm transition-all
                             peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:left-4
-                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{i18n.T6}</label>
+                            peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>{translations.T6}</label>
             </div>
 
             {errorMsg ?
@@ -114,11 +114,13 @@ const Contact = ({ i18n }) => {
                   <CircleLoader color={'white'} size={50} />
                 </div>
                 :
-                <input type='submit' className='button my-4' aria-label='Send Contact Form' value={i18n.T7}></input>
+                <input type='submit' className='button my-4' aria-label='Send Contact Form' value={translations.T7}></input>
             }
           </form>
         </div>
       </div>
+      <h2 className='text-xl mb-2'>Find us on the map</h2>
+      <MapComponent i18n={i18n} />
     </>
   )
 }
@@ -126,8 +128,8 @@ const Contact = ({ i18n }) => {
 export async function getStaticProps(context) {
   let i18n
   context.locale === 'en' ?
-    i18n = langEN.contact :
-    i18n = langES.contact
+    i18n = langEN :
+    i18n = langES
   return {
     props: { i18n },
   }
