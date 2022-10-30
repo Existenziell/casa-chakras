@@ -18,15 +18,15 @@ const TTC = ({ i18n }) => {
         <p>Are you ready for the next step? We might just have exactly the right program for you!</p>
         <p>A teacher training can be quite an intense endeavour, but we are here to support you and help you find the right answers.</p>
         <p>Together, we have a combined time of teaching of over 10 years and are very passionate about teaching and giving back to the community.</p>
-        <p className='mt-4'>During our course you will come in contact with many different styles and philosophies of Yoga - in order to give a wide understanding and good base for further specialisations.</p>
+        {/* <p className='mt-4'>During our course you will come in contact with many different styles and philosophies of Yoga - in order to give a wide understanding and good base for further specialisations.</p> */}
         {/* <p>We include styles such as Hatha, Kundalini, Ashtanga, Vinyasa, Yin and Tantra...</p> */}
 
-        <h2 className='mb-4 text-xl text-brand-dark dark:text-brand mt-16'>Upcoming trainings:</h2>
+        <h2 className='mb-4 text-xl text-brand-dark dark:text-brand mt-10'>Upcoming trainings:</h2>
 
         <div className='text-left bg-white dark:bg-black rounded p-6'>
           <p className='text-2xl mb-4 bg-gray-100 p-4 rounded-sm max-w-max'>14 Days 200-Hour Introduction to Kundalini Yoga Training</p>
 
-          <div className='max-w-max my-6'>
+          <div className='max-w-max my-8'>
             <Link href='/contact'>
               <a className='button button-secondary mr-2'>
                 Send Inquiry
