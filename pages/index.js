@@ -22,7 +22,8 @@ const Casa = ({ i18n }) => {
       </header>
 
       <div className='max-w-xl m-auto px-4 leading-relaxed my-16' id='anchor'>
-        <p>{i18n.T2}</p>
+        <Image src='/logo.webp' alt='Logo' width={229} height={199} />
+        {/* <p>{i18n.T2}</p> */}
         <h2 className='text-6xl my-8'>{i18n.T3}</h2>
         <p className='mt-8'>{i18n.T4}</p>
         <div className='my-8 flex flex-col sm:flex-row items-center justify-center gap-2'>

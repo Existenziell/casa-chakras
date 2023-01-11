@@ -46,7 +46,7 @@ const Contact = ({ i18n }) => {
         <meta name='description' content={translations.desc} />
       </Head>
 
-      <div className='flex flex-col items-center justify-center px-4 md:px-8 py-24 lg:w-2/3 lg:mx-auto'>
+      <div className='flex flex-col items-center justify-center px-4 md:px-8 pt-24 pb-10 lg:w-2/3 lg:mx-auto'>
         <h1 className='text-4xl md:text-6xl mb-10'>{translations.T1}</h1>
         <div className='md:flex items-center gap-8 md:text-right md:mb-8'>
           <div className='md:w-1/2'>
@@ -119,7 +119,8 @@ const Contact = ({ i18n }) => {
           </form>
         </div>
       </div>
-      <h2 className='text-xl mb-2'>Find us on the map</h2>
+      <Image src='/logo.webp' alt='Logo' width={229} height={199} />
+      <h2 className='text-xl mb-2 mt-6'>Find us on the map</h2>
       <MapComponent i18n={i18n} />
     </>
   )
