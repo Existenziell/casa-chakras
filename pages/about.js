@@ -30,7 +30,7 @@ const About = ({ i18n }) => {
             We are 2 professional Yoga teachers welcoming you and offering a wide variety of Yoga styles and experiences.
             Together, we have a combined time of teaching of over 10 years and are very passionate about teaching and giving back to the community.
           </p>
-          <p className='mt-6'>Available Yoga Styles:<br /> Hatha, Vinyasa, Kundalini, Ashtanga, Yin.</p>
+          <p className='mt-6'>Available Yoga Styles:<br /> Hatha, Vinyasa, Kundalini, Tantra, Integral.</p>
           <p className='mt-6'>We speak the following languages:<br />English, Español, Português, Français, Deutsch.</p>
           <Link href='/contact'><a className='link mt-6 inline-block'>Contact us</a></Link>
         </div>
