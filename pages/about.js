@@ -27,7 +27,7 @@ const About = ({ i18n }) => {
         <div className='mb-4 max-w-2xl mx-auto leading-relaxed text-xl text-left'>
           <p>
             Casa Chakras is the perfect place to spend a little time away from it all, giving you the ability to focus and return to a relaxed baseline.
-            We are 2 professional Yoga teachers welcoming you and offering a wide variety of Yoga styles and experiences.
+            We are a community of dedicated Yoga teachers welcoming you and offering a wide variety of Yoga styles and experiences.
             Together, we have a combined time of teaching of over 10 years and are very passionate about teaching and giving back to the community.
           </p>
           <p className='mt-6'>Available Yoga Styles:<br /> Hatha, Vinyasa, Kundalini, Tantra, Integral.</p>
