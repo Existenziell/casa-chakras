@@ -24,7 +24,7 @@ const TTC = ({ i18n }) => {
         <h2 className='mb-4 text-xl text-brand-dark dark:text-brand mt-10'>Upcoming trainings:</h2>
 
         <div className='text-left bg-white dark:bg-black rounded p-6'>
-          <p className='text-2xl mb-4 bg-gray-100 p-4 rounded-sm max-w-max'>14 Days 200-Hour Introduction to Kundalini Yoga Training</p>
+          <p className='text-2xl mb-4 bg-gray-100 p-4 rounded-sm max-w-max'>10 Days 200-Hour Introduction to Kundalini Yoga Training</p>
 
           <div className='max-w-max my-8'>
             <Link href='/contact'>
