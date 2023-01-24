@@ -40,7 +40,7 @@ const Casa = ({ i18n }) => {
       <section className='flex items-center justify-center h-screen mb-12 sm:bg-fixed bg-center bg-cover bg-parallax-2'>
         <p className='w-full px-6 py-8 text-white bg-brand-dark/80 rounded flex flex-col sm:flex-row items-center justify-center gap-2'>
           <Link href='/contact'><a className='button inline-block'>{i18n.B3}</a></Link>
-          <Link href='/visit'><a className='button inline-block'>{i18n.B4}</a></Link>
+          <Link href='/about'><a className='button inline-block'>{i18n.B4}</a></Link>
         </p>
       </section>
 
